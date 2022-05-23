@@ -21,11 +21,11 @@ from datetime import timedelta, time, date, datetime
 # In[2]:
 
 
-username = "473680"
-password ="Yugal9742@"
-twoFA = "1986"
-api_secret = "mjKOWpNOiTkFz8WyVRI0b21Wew3ZRKf6eX3cbreYFrLIcMk6HL3ao4F7MYhoJ78l"
-app_id= "WJF97ThJWk"
+username = "123456"  #Incorrect information used
+password ="123456"   #Incorrect information used
+twoFA = "1900"       #Incorrect information used
+api_secret = "qwertyuio"   #Incorrect information used
+app_id= "asdfghjkk"        #Incorrect information used
 Stock_List = 'TATAMOTORS' # We can add n number of stocks here as a list
 
 
@@ -163,7 +163,7 @@ def main():
     list_new = []
     for i in df.index[49:]:
         if df['close'][i] and df['open'][i] > df['MA_50'][i] and df['RSI_14'][i] > 60 and current_signal != "Buy": 
-#             print (i,"Buy",df['close'][i])
+            print (i,"Buy",df['close'][i])
             list_new.append ((i,"Buy",df['close'][i]))
             buy_signal(ins_scrip)
             current_signal = 'Buy'
